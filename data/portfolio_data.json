@@ -1,0 +1,186 @@
+{
+  "personal_info": {
+    "name": "Your Name",
+    "title": "Software Engineer & AI/ML Developer",
+    "subtitle": "Data Science & Business Management Enthusiast",
+    "email": "your.email@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "Your City, Country",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "github": "https://github.com/yourusername",
+    "website": "https://yourwebsite.com",
+    "bio": "Passionate software engineer specializing in AI/ML development, data science, and business management. I love creating innovative solutions that bridge technology and business needs.",
+    "profile_image": "images/profile.jpg"
+  },
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": [
+        {"name": "Python", "level": 90, "color": "#3776ab"},
+        {"name": "JavaScript", "level": 85, "color": "#f7df1e"},
+        {"name": "Java", "level": 80, "color": "#ed8b00"},
+        {"name": "C++", "level": 75, "color": "#00599c"},
+        {"name": "SQL", "level": 85, "color": "#4479a1"}
+      ]
+    },
+    {
+      "category": "AI/ML & Data Science",
+      "items": [
+        {"name": "TensorFlow", "level": 85, "color": "#ff6f00"},
+        {"name": "PyTorch", "level": 80, "color": "#ee4c2c"},
+        {"name": "Scikit-learn", "level": 90, "color": "#f7931e"},
+        {"name": "Pandas", "level": 95, "color": "#150458"},
+        {"name": "NumPy", "level": 90, "color": "#013243"}
+      ]
+    },
+    {
+      "category": "Web Development",
+      "items": [
+        {"name": "React", "level": 85, "color": "#61dafb"},
+        {"name": "Flask", "level": 90, "color": "#000000"},
+        {"name": "Django", "level": 80, "color": "#092e20"},
+        {"name": "Node.js", "level": 75, "color": "#339933"},
+        {"name": "HTML/CSS", "level": 95, "color": "#e34f26"}
+      ]
+    },
+    {
+      "category": "Tools & Technologies",
+      "items": [
+        {"name": "Git", "level": 90, "color": "#f05032"},
+        {"name": "Docker", "level": 80, "color": "#2496ed"},
+        {"name": "AWS", "level": 75, "color": "#ff9900"},
+        {"name": "MongoDB", "level": 80, "color": "#47a248"},
+        {"name": "PostgreSQL", "level": 85, "color": "#336791"}
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI-Powered Recommendation System",
+      "category": "AI/ML",
+      "description": "Built a sophisticated recommendation engine using collaborative filtering and deep learning techniques.",
+      "long_description": "Developed an advanced recommendation system that combines collaborative filtering, content-based filtering, and deep learning approaches to provide personalized recommendations. The system processes user behavior data and item features to generate accurate predictions.",
+      "technologies": ["Python", "TensorFlow", "Pandas", "Flask", "Redis"],
+      "image": "images/projects/recommendation-system.jpg",
+      "github": "https://github.com/yourusername/recommendation-system",
+      "demo": "https://recommendation-demo.com",
+      "features": [
+        "Real-time recommendations",
+        "Collaborative filtering algorithm",
+        "Deep neural network implementation",
+        "A/B testing framework",
+        "Performance monitoring dashboard"
+      ],
+      "status": "completed",
+      "date": "2024-12-15"
+    },
+    {
+      "id": 2,
+      "title": "Business Analytics Dashboard",
+      "category": "Data Science",
+      "description": "Created an interactive dashboard for business intelligence and data visualization.",
+      "long_description": "Developed a comprehensive business analytics dashboard that aggregates data from multiple sources and provides interactive visualizations for business decision-making. Includes real-time data processing and automated reporting features.",
+      "technologies": ["Python", "Plotly", "Dash", "PostgreSQL", "Docker"],
+      "image": "images/projects/analytics-dashboard.jpg",
+      "github": "https://github.com/yourusername/analytics-dashboard",
+      "demo": "https://analytics-demo.com",
+      "features": [
+        "Real-time data visualization",
+        "Interactive charts and graphs",
+        "Automated report generation",
+        "Multi-source data integration",
+        "Role-based access control"
+      ],
+      "status": "completed",
+      "date": "2024-11-20"
+    },
+    {
+      "id": 3,
+      "title": "E-commerce Platform",
+      "category": "Web Development",
+      "description": "Full-stack e-commerce application with modern UI and advanced features.",
+      "long_description": "Built a complete e-commerce platform from scratch with modern design principles, secure payment processing, inventory management, and admin dashboard. Implements best practices for scalability and security.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+      "image": "images/projects/ecommerce-platform.jpg",
+      "github": "https://github.com/yourusername/ecommerce-platform",
+      "demo": "https://ecommerce-demo.com",
+      "features": [
+        "Responsive design",
+        "Secure payment processing",
+        "Inventory management",
+        "Admin dashboard",
+        "Search and filtering"
+      ],
+      "status": "completed",
+      "date": "2024-10-10"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Tech Company Inc.",
+      "location": "Remote",
+      "duration": "2023 - Present",
+      "description": "Leading AI/ML initiatives and developing scalable software solutions.",
+      "achievements": [
+        "Led development of ML pipeline that improved model accuracy by 25%",
+        "Mentored junior developers and established coding best practices",
+        "Implemented CI/CD pipeline reducing deployment time by 60%"
+      ],
+      "type": "work"
+    },
+    {
+      "title": "Data Science Intern",
+      "company": "Analytics Startup",
+      "location": "New York, NY",
+      "duration": "2022 - 2023",
+      "description": "Worked on data analysis projects and machine learning model development.",
+      "achievements": [
+        "Built predictive models for customer churn analysis",
+        "Automated data preprocessing pipelines",
+        "Presented findings to stakeholders and clients"
+      ],
+      "type": "work"
+    }
+  ],
+  "volunteering": [
+    {
+      "title": "Technology Committee Chair",
+      "organization": "University Computer Science Society",
+      "duration": "2023 - Present",
+      "description": "Leading technology initiatives and organizing coding workshops for students.",
+      "achievements": [
+        "Organized 15+ technical workshops",
+        "Increased society membership by 40%",
+        "Established partnerships with tech companies"
+      ]
+    },
+    {
+      "title": "Coding Mentor",
+      "organization": "Code for Good",
+      "duration": "2022 - Present",
+      "description": "Mentoring underprivileged students in programming and computer science.",
+      "achievements": [
+        "Mentored 20+ students",
+        "Developed beginner-friendly curriculum",
+        "Achieved 90% course completion rate"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "University Name",
+      "duration": "2020 - 2024",
+      "gpa": "3.8/4.0",
+      "relevant_courses": [
+        "Machine Learning",
+        "Data Structures & Algorithms",
+        "Database Systems",
+        "Software Engineering",
+        "Business Management"
+      ]
+    }
+  ]
+}
