@@ -18,11 +18,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+      <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/animations.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/components.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/advanced-ux.css') }}" rel="stylesheet">
     
     {% block extra_css %}{% endblock %}
 </head>
@@ -133,12 +133,15 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    
-    <!-- Custom JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>    <!-- Custom JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
     <script src="{{ url_for('static', filename='js/components.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/advanced-ux.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/interactive-effects.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme-switcher.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/skills-showcase.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/performance-monitor.js') }}"></script>
     
     {% block extra_js %}{% endblock %}
 </body>

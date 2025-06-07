@@ -1,52 +1,82 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Hero Section -->
-<section id="home" class="hero-section">
-    <div class="hero-background">
-        <div id="particles-js"></div>
+<!-- Revolutionary Hero Section - Immersive 3D Environment -->
+<section id="home" class="quantum-hero">
+    <!-- Multi-dimensional Background System -->
+    <div class="reality-layers">
+        <canvas id="quantum-canvas" class="quantum-layer"></canvas>
+        <div class="hologram-grid"></div>
+        <div class="neural-network"></div>
+        <div class="data-streams"></div>
     </div>
-    <div class="container">
-        <div class="row align-items-center min-vh-100">
-            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="greeting">Hello, I'm</span>
-                        <span class="name">{{ data.personal_info.name }}</span>
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        <span id="typed-text"></span>
-                    </h2>
-                    <p class="hero-description">{{ data.personal_info.bio }}</p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary btn-lg me-3">
-                            <i class="fas fa-eye"></i> View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-outline-primary btn-lg">
-                            <i class="fas fa-envelope"></i> Get In Touch
-                        </a>
+    
+    <!-- Floating Interface Pods -->
+    <div class="interface-universe">
+        <!-- Main Identity Pod -->
+        <div class="quantum-pod identity-pod" data-pod="main">
+            <div class="pod-core">
+                <div class="profile-hologram">
+                    <div class="hologram-ring ring-1"></div>
+                    <div class="hologram-ring ring-2"></div>
+                    <div class="hologram-ring ring-3"></div>
+                    <img src="{{ url_for('static', filename=data.personal_info.profile_image) }}" 
+                         alt="{{ data.personal_info.name }}" class="profile-quantum">
+                </div>
+                <div class="identity-matrix">
+                    <h1 class="quantum-name">{{ data.personal_info.name }}</h1>
+                    <div class="role-synthesizer">
+                        <span class="role-particle" data-role="Developer"></span>
+                        <span class="role-particle" data-role="Designer"></span>
+                        <span class="role-particle" data-role="Innovator"></span>
                     </div>
-                    
-                    <div class="social-links">
-                        <a href="{{ data.personal_info.github }}" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="{{ data.personal_info.linkedin }}" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:{{ data.personal_info.email }}" class="social-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
+                    <p class="bio-stream">{{ data.personal_info.bio }}</p>
                 </div>
             </div>
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
-                <div class="hero-image">
-                    <div class="image-container">
-                        <img src="{{ url_for('static', filename=data.personal_info.profile_image) }}" 
-                             alt="{{ data.personal_info.name }}" class="profile-image">
-                        <div class="image-overlay"></div>
+        </div>
+        
+        <!-- Action Constellation -->
+        <div class="action-constellation">
+            <div class="quantum-pod action-pod" data-action="projects">
+                <div class="pod-icon"><i class="fas fa-rocket"></i></div>
+                <span class="pod-label">Projects</span>
+                <div class="pod-energy"></div>
+            </div>
+            <div class="quantum-pod action-pod" data-action="skills">
+                <div class="pod-icon"><i class="fas fa-brain"></i></div>
+                <span class="pod-label">Skills</span>
+                <div class="pod-energy"></div>
+            </div>
+            <div class="quantum-pod action-pod" data-action="contact">
+                <div class="pod-icon"><i class="fas fa-satellite-dish"></i></div>
+                <span class="pod-label">Contact</span>
+                <div class="pod-energy"></div>
+            </div>
+        </div>
+        
+        <!-- Social Network Nodes -->
+        <div class="social-network">
+            <div class="network-node" data-network="github">
+                <a href="{{ data.personal_info.github }}" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <div class="node-pulse"></div>
+                </a>
+            </div>
+            <div class="network-node" data-network="linkedin">
+                <a href="{{ data.personal_info.linkedin }}" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <div class="node-pulse"></div>
+                </a>
+            </div>
+            <div class="network-node" data-network="email">
+                <a href="mailto:{{ data.personal_info.email }}">
+                    <i class="fas fa-envelope"></i>
+                    <div class="node-pulse"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
                     </div>
                 </div>
             </div>
@@ -62,41 +92,41 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <h2 class="section-title">About Me</h2>
-                    <p class="section-subtitle">Passionate about creating innovative solutions</p>
+                <div class="section-header text-center" data-animate="fade-in">
+                    <h2 class="section-title glitch-text" data-text="About Me">About Me</h2>
+                    <p class="section-subtitle" data-animate="fade-in" data-delay="200">Passionate about creating innovative solutions</p>
                 </div>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-lg-6" data-aos="fade-right">
-                <div class="about-content">
-                    <h3 class="about-title">{{ data.personal_info.title }}</h3>
-                    <p class="about-description">{{ data.personal_info.bio }}</p>
+            <div class="col-lg-6" data-animate="slide-in" data-direction="left">
+                <div class="about-content morph-card">
+                    <h3 class="about-title" data-animate="fade-in" data-delay="400">{{ data.personal_info.title }}</h3>
+                    <p class="about-description" data-animate="fade-in" data-delay="600">{{ data.personal_info.bio }}</p>
                     
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="{{ data.projects|length }}">0</div>
+                    <div class="about-stats" data-animate="fade-in" data-delay="800">
+                        <div class="stat-item morph-card">
+                            <div class="stat-number" data-counter="{{ data.projects|length }}" data-duration="2000">0</div>
                             <div class="stat-label">Projects Completed</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-item morph-card">
+                            <div class="stat-number" data-counter="5" data-duration="2500">0</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="100">0</div>
+                        <div class="stat-item morph-card">
+                            <div class="stat-number" data-counter="100" data-duration="3000">0</div>
                             <div class="stat-label">Happy Clients</div>
                         </div>
                     </div>
                     
-                    <div class="about-info">
+                    <div class="about-info" data-animate="fade-in" data-delay="1000">
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
-                            <span>{{ data.personal_info.email }}</span>
+                            <span class="cyber-link">{{ data.personal_info.email }}</span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-phone"></i>
-                            <span>{{ data.personal_info.phone }}</span>
+                            <span class="cyber-link">{{ data.personal_info.phone }}</span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -117,102 +147,253 @@
     </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="skills-section section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <h2 class="section-title">Skills & Expertise</h2>
-                    <p class="section-subtitle">Technologies and tools I work with</p>
-                </div>
+<!-- Revolutionary Skills Section - Neural Network Visualization -->
+<section id="skills" class="neural-network-section">
+    <!-- Brain Interface -->
+    <div class="brain-interface">
+        <div class="interface-core">
+            <h2 class="neural-title">Knowledge Neural Network</h2>
+            <div class="brain-scanner">
+                <div class="scanner-line"></div>
+                <div class="scanner-pulse"></div>
             </div>
         </div>
+    </div>
+    
+    <!-- Neural Network Visualization -->
+    <div class="neural-matrix">
+        <canvas id="neural-canvas" class="neural-canvas"></canvas>
         
-        {% for skill_category in data.skills %}
-        <div class="skill-category" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
-            <h3 class="skill-category-title">{{ skill_category.category }}</h3>
-            <div class="skills-grid">
-                {% for skill in skill_category['items'] %}
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span class="skill-name">{{ skill.name }}</span>
-                        <span class="skill-percentage">{{ skill.level }}%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" 
-                             data-width="{{ skill.level }}" 
-                             style="background-color: {{ skill.color }}"></div>
+        <!-- Skill Nodes -->
+        <div class="skill-nodes">
+            {% for skill_category in data.skills %}
+            <div class="category-cluster" data-category="{{ skill_category.category }}">
+                <!-- Central Category Node -->
+                <div class="category-node">
+                    <div class="node-core">
+                        <div class="node-icon">
+                            <i class="fas fa-{{ 'code' if 'Programming' in skill_category.category else 'tools' if 'Tools' in skill_category.category else 'layer-group' }}"></i>
+                        </div>
+                        <span class="node-label">{{ skill_category.category }}</span>
+                        <div class="node-energy-ring"></div>
                     </div>
                 </div>
+                
+                <!-- Skill Satellites -->
+                <div class="skill-satellites">
+                    {% for skill in skill_category['items'] %}
+                    <div class="skill-satellite" 
+                         data-skill="{{ skill.name }}" 
+                         data-level="{{ skill.level }}"
+                         style="--skill-color: {{ skill.color }}; --orbit-delay: {{ loop.index0 * 0.5 }}s;">
+                        
+                        <div class="satellite-orbit">
+                            <div class="satellite-core">
+                                <div class="skill-progress-ring">
+                                    <svg class="progress-svg" viewBox="0 0 36 36">
+                                        <path class="progress-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="progress-fill" 
+                                              d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                                              stroke-dasharray="{{ skill.level }}, 100" />
+                                    </svg>
+                                    <div class="progress-text">{{ skill.level }}%</div>
+                                </div>
+                                <div class="skill-info-panel">
+                                    <h4 class="skill-name">{{ skill.name }}</h4>
+                                    <div class="skill-level-indicator">
+                                        <div class="level-bars">
+                                            {% for i in range(5) %}
+                                            <div class="level-bar {{ 'active' if (skill.level // 20) > i else '' }}"></div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="satellite-connections"></div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Neural Connections -->
+        <div class="neural-connections">
+            <svg class="connections-svg">
+                <!-- Dynamic connections will be generated by JavaScript -->
+            </svg>
+        </div>
+    </div>
+    
+    <!-- Skills Control Interface -->
+    <div class="skills-control-interface">
+        <div class="control-grid">
+            <div class="control-panel">
+                <div class="panel-header">
+                    <span class="panel-title">Neural Analysis</span>
+                    <div class="analysis-indicator">
+                        <div class="indicator-dot"></div>
+                        <span>Active</span>
+                    </div>
+                </div>
+                <div class="neural-stats">
+                    <div class="stat-display">
+                        <span class="stat-label">Total Skills</span>
+                        <span class="stat-value" id="total-skills">--</span>
+                    </div>
+                    <div class="stat-display">
+                        <span class="stat-label">Avg Proficiency</span>
+                        <span class="stat-value" id="avg-proficiency">--</span>
+                    </div>
+                    <div class="stat-display">
+                        <span class="stat-label">Categories</span>
+                        <span class="stat-value">{{ data.skills|length }}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="filter-node active" data-filter="all">
+                    <span class="filter-icon"><i class="fas fa-brain"></i></span>
+                    <span class="filter-label">All Networks</span>
+                    <div class="filter-energy"></div>
+                </button>
+                {% for skill_category in data.skills %}
+                <button class="filter-node" data-filter="{{ skill_category.category }}">
+                    <span class="filter-icon">
+                        <i class="fas fa-{{ 'code' if 'Programming' in skill_category.category else 'tools' if 'Tools' in skill_category.category else 'layer-group' }}"></i>
+                    </span>
+                    <span class="filter-label">{{ skill_category.category }}</span>
+                    <div class="filter-energy"></div>
+                </button>
                 {% endfor %}
-            </div>
-        </div>
-        {% endfor %}
-        
-        <!-- Skills Chart -->
-        <div class="row mt-5">
-            <div class="col-lg-8 mx-auto" data-aos="fade-up">
-                <div class="chart-container">
-                    <canvas id="skillsChart"></canvas>
-                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects" class="projects-section section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">Some of my recent work</p>
-                </div>
+<!-- Revolutionary Projects Section - 3D Holographic Gallery -->
+<section id="projects" class="quantum-gallery">
+    <!-- Dimensional Portal -->
+    <div class="gallery-portal">
+        <div class="portal-core">
+            <h2 class="quantum-title">Project Universe</h2>
+            <div class="reality-scanner"></div>
+        </div>
+    </div>
+    
+    <!-- 3D Project Constellation -->
+    <div class="project-cosmos">
+        <div class="cosmos-navigator">
+            <div class="nav-sphere" data-filter="all">
+                <span class="sphere-label">All Dimensions</span>
+                <div class="sphere-energy"></div>
+            </div>
+            <div class="nav-sphere" data-filter="ai-ml">
+                <span class="sphere-label">AI/ML</span>
+                <div class="sphere-energy"></div>
+            </div>
+            <div class="nav-sphere" data-filter="web">
+                <span class="sphere-label">Web Reality</span>
+                <div class="sphere-energy"></div>
+            </div>
+            <div class="nav-sphere" data-filter="data-science">
+                <span class="sphere-label">Data Science</span>
+                <div class="sphere-energy"></div>
             </div>
         </div>
         
-        <!-- Project Filters -->
-        <div class="project-filters text-center" data-aos="fade-up">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="data-science">Data Science</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-        </div>
-        
-        <div class="projects-grid">
+        <!-- Floating Project Holograms -->
+        <div class="hologram-matrix">
             {% for project in data.projects %}
-            <div class="project-card" 
-                 data-aos="fade-up" 
-                 data-aos-delay="{{ loop.index0 * 100 }}"
-                 data-category="{{ project.category }}">
-                <div class="project-image">
-                    <img src="{{ url_for('static', filename=project.image) }}" 
-                         alt="{{ project.title }}">
-                    <div class="project-overlay">
-                        <div class="project-links">
-                            <a href="{{ project.demo_url }}" target="_blank" class="project-link">
-                                <i class="fas fa-external-link-alt"></i>
-                            </a>
-                            <a href="{{ project.github_url }}" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i>
-                            </a>
+            <div class="project-hologram" 
+                 data-category="{{ project.category }}"
+                 data-project="{{ loop.index0 }}">
+                
+                <!-- Holographic Frame -->
+                <div class="hologram-frame">
+                    <div class="frame-ring ring-outer"></div>
+                    <div class="frame-ring ring-middle"></div>
+                    <div class="frame-ring ring-inner"></div>
+                    
+                    <!-- Project Projection -->
+                    <div class="project-projection">
+                        <div class="projection-screen">
+                            <img src="{{ url_for('static', filename=project.image) }}" 
+                                 alt="{{ project.title }}" class="project-visual">
+                            <div class="visual-distortion"></div>
+                        </div>
+                        
+                        <!-- Interactive Control Panel -->
+                        <div class="control-panel">
+                            <div class="panel-header">
+                                <h3 class="project-designation">{{ project.title }}</h3>
+                                <div class="designation-line"></div>
+                            </div>
+                            
+                            <div class="project-matrix">
+                                <p class="matrix-description">{{ project.description }}</p>
+                                
+                                <!-- Technology Nodes -->
+                                <div class="tech-nodes">
+                                    {% for tech in project.technologies %}
+                                    <div class="tech-node">
+                                        <span class="node-label">{{ tech }}</span>
+                                        <div class="node-pulse"></div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                
+                                <!-- Action Portals -->
+                                <div class="action-portals">
+                                    <a href="{{ project.demo_url }}" target="_blank" class="portal-link demo-portal">
+                                        <i class="fas fa-rocket"></i>
+                                        <span>Launch Demo</span>
+                                        <div class="portal-energy"></div>
+                                    </a>
+                                    <a href="{{ project.github_url }}" target="_blank" class="portal-link code-portal">
+                                        <i class="fab fa-github"></i>
+                                        <span>View Code</span>
+                                        <div class="portal-energy"></div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-content">
-                    <h3 class="project-title">{{ project.title }}</h3>
-                    <p class="project-description">{{ project.description }}</p>
-                    <div class="project-tech">
-                        {% for tech in project.technologies %}
-                        <span class="tech-tag">{{ tech }}</span>
-                        {% endfor %}
-                    </div>
+                
+                <!-- Hologram Stabilizers -->
+                <div class="hologram-stabilizers">
+                    <div class="stabilizer stabilizer-1"></div>
+                    <div class="stabilizer stabilizer-2"></div>
+                    <div class="stabilizer stabilizer-3"></div>
+                    <div class="stabilizer stabilizer-4"></div>
                 </div>
             </div>
             {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Gallery Navigation Interface -->
+    <div class="gallery-interface">
+        <div class="interface-panel">
+            <div class="panel-controls">
+                <button class="control-btn" id="gallery-prev">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Previous Reality</span>
+                </button>
+                <div class="dimension-counter">
+                    <span class="current-dimension">01</span>
+                    <div class="counter-separator"></div>
+                    <span class="total-dimensions">{{ data.projects|length|string.zfill(2) }}</span>
+                </div>
+                <button class="control-btn" id="gallery-next">
+                    <span>Next Reality</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </div>
     </div>
 </section>
@@ -279,9 +460,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <h2 class="section-title">Download CV</h2>
-                    <p class="section-subtitle">Get my resume in different formats</p>
+                <div class="section-header text-center" data-animate="fade-in">
+                    <h2 class="section-title glitch-text" data-text="Download CV">Download CV</h2>
+                    <p class="section-subtitle" data-animate="fade-in" data-delay="200">Get my resume in different formats</p>
                 </div>
             </div>
         </div>
@@ -289,26 +470,25 @@
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="cv-cards">
-                    <div class="cv-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cv-card morph-card" data-animate="scale-in" data-delay="400">
                         <div class="cv-icon">
                             <i class="fas fa-heart"></i>
                         </div>
                         <h3 class="cv-title">Friendly CV</h3>
                         <p class="cv-description">Creative and colorful version with personality</p>
                         <a href="{{ url_for('download_cv', cv_type='friendly') }}" 
-                           class="btn btn-primary cv-download-btn">
+                           class="magnetic-button cv-download-btn">
                             <i class="fas fa-download"></i> Download Friendly CV
                         </a>
                     </div>
-                    
-                    <div class="cv-card" data-aos="fade-up" data-aos-delay="200">
+                      <div class="cv-card morph-card" data-animate="scale-in" data-delay="600">
                         <div class="cv-icon">
                             <i class="fas fa-briefcase"></i>
                         </div>
                         <h3 class="cv-title">Formal CV</h3>
                         <p class="cv-description">Professional and traditional format</p>
                         <a href="{{ url_for('download_cv', cv_type='formal') }}" 
-                           class="btn btn-outline-primary cv-download-btn">
+                           class="magnetic-button btn-outline cv-download-btn">
                             <i class="fas fa-download"></i> Download Formal CV
                         </a>
                     </div>
@@ -323,40 +503,39 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="section-header text-center" data-aos="fade-up">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">Let's work together on your next project</p>
+                <div class="section-header text-center" data-animate="fade-in">
+                    <h2 class="section-title glitch-text" data-text="Get In Touch">Get In Touch</h2>
+                    <p class="section-subtitle" data-animate="fade-in" data-delay="200">Let's work together on your next project</p>
                 </div>
             </div>
         </div>
-        
-        <div class="row">
+          <div class="row">
             <div class="col-lg-8 mx-auto">
-                <form id="contactForm" class="contact-form" data-aos="fade-up">
+                <form id="contactForm" class="contact-form morph-card" data-animate="scale-in" data-delay="400">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            <div class="form-group" data-animate="fade-in" data-delay="600">
+                                <input type="text" name="name" class="form-control cyber-input" placeholder="Your Name" required>
                                 <i class="fas fa-user form-icon"></i>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            <div class="form-group" data-animate="fade-in" data-delay="700">
+                                <input type="email" name="email" class="form-control cyber-input" placeholder="Your Email" required>
                                 <i class="fas fa-envelope form-icon"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                    <div class="form-group" data-animate="fade-in" data-delay="800">
+                        <input type="text" name="subject" class="form-control cyber-input" placeholder="Subject" required>
                         <i class="fas fa-tag form-icon"></i>
                     </div>
-                    <div class="form-group">
-                        <textarea name="message" class="form-control" rows="6" placeholder="Your Message" required></textarea>
+                    <div class="form-group" data-animate="fade-in" data-delay="900">
+                        <textarea name="message" class="form-control cyber-input" rows="6" placeholder="Your Message" required></textarea>
                         <i class="fas fa-comment form-icon"></i>
                     </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                    <div class="text-center" data-animate="fade-in" data-delay="1000">
+                        <button type="submit" class="magnetic-button submit-btn">
                             <span class="btn-text">Send Message</span>
                             <span class="btn-loader"></span>
                         </button>
