@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - {{ data.personal_info.name }}{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-content">
+        <div class="error-animation">
+            <div class="error-number">404</div>
+            <div class="error-glitch" data-text="404">404</div>
+        </div>
+        
+        <h1 class="error-title">Oops! Page Not Found</h1>
+        <p class="error-description">
+            The page you're looking for seems to have wandered off into the digital void. 
+            Don't worry, even the best developers get lost sometimes!
+        </p>
+        
+        <div class="error-actions">
+            <a href="{{ url_for('index') }}" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                Back to Home
+            </a>
+            <a href="{{ url_for('index') }}#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+            </a>
+        </div>
+        
+        <div class="error-suggestions">
+            <h3>Maybe you were looking for:</h3>
+            <ul>
+                <li><a href="{{ url_for('index') }}#about">About Me</a></li>
+                <li><a href="{{ url_for('index') }}#projects">My Projects</a></li>
+                <li><a href="{{ url_for('index') }}#skills">Technical Skills</a></li>
+                <li><a href="{{ url_for('index') }}#experience">Work Experience</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+.error-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+    color: white;
+}
+
+.error-animation {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.error-number {
+    font-size: 8rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+.error-glitch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    animation: glitch 2s infinite;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.error-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.error-suggestions {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.error-suggestions h3 {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.error-suggestions ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
+.error-suggestions a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.error-suggestions a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+@keyframes glitch {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    20% { transform: translateX(-50%) translateY(-2px); }
+    40% { transform: translateX(-50%) translateY(-1px); }
+    60% { transform: translateX(-50%) translateY(1px); }
+    80% { transform: translateX(-50%) translateY(-1px); }
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@media (max-width: 768px) {
+    .error-number, .error-glitch {
+        font-size: 4rem;
+    }
+    
+    .error-title {
+        font-size: 2rem;
+    }
+    
+    .error-description {
+        font-size: 1rem;
+    }
+    
+    .error-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add some interactive effects
+    const errorNumber = document.querySelector('.error-number');
+    
+    errorNumber.addEventListener('mouseover', function() {
+        this.style.transform = 'scale(1.1) rotate(-5deg)';
+    });
+    
+    errorNumber.addEventListener('mouseout', function() {
+        this.style.transform = 'scale(1) rotate(0deg)';
+    });
+});
+</script>
+{% endblock %}

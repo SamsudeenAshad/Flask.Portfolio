@@ -22,7 +22,7 @@ def load_portfolio_data():
         }
 
 @app.route('/')
-def home():
+def index():
     """Main portfolio page"""
     data = load_portfolio_data()
     return render_template('index.html', data=data)
@@ -116,11 +116,13 @@ def api_projects():
 
 @app.errorhandler(404)
 def not_found(error):
-    return render_template('404.html'), 404
+    data = load_portfolio_data()
+    return render_template('404.html', data=data), 404
 
 @app.errorhandler(500)
 def internal_error(error):
-    return render_template('500.html'), 500
+    data = load_portfolio_data()
+    return render_template('500.html', data=data), 500
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

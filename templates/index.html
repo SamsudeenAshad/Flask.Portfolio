@@ -133,7 +133,7 @@
         <div class="skill-category" data-aos="fade-up" data-aos-delay="{{ loop.index0 * 100 }}">
             <h3 class="skill-category-title">{{ skill_category.category }}</h3>
             <div class="skills-grid">
-                {% for skill in skill_category.items %}
+                {% for skill in skill_category['items'] %}
                 <div class="skill-item">
                     <div class="skill-info">
                         <span class="skill-name">{{ skill.name }}</span>

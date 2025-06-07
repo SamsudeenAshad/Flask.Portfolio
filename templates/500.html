@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - {{ data.personal_info.name }}{% endblock %}
+
+{% block content %}
+<div class="error-container">
+    <div class="error-content">
+        <div class="error-animation">
+            <div class="error-number">500</div>
+            <div class="error-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+        </div>
+        
+        <h1 class="error-title">Internal Server Error</h1>
+        <p class="error-description">
+            Something went wrong on our end. Our servers are having a little trouble, 
+            but don't worry - our team of digital engineers is on it!
+        </p>
+        
+        <div class="error-details">
+            <p>What you can do:</p>
+            <ul>
+                <li>Try refreshing the page in a few moments</li>
+                <li>Check if the issue persists</li>
+                <li>Contact me if the problem continues</li>
+            </ul>
+        </div>
+        
+        <div class="error-actions">
+            <button onclick="location.reload()" class="btn btn-primary">
+                <i class="fas fa-redo"></i>
+                Try Again
+            </button>
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                <i class="fas fa-home"></i>
+                Back to Home
+            </a>
+            <a href="{{ url_for('index') }}#contact" class="btn btn-outline">
+                <i class="fas fa-bug"></i>
+                Report Issue
+            </a>
+        </div>
+        
+        <div class="error-code">
+            <small>Error Code: 500 | {{ error_id if error_id else 'INTERNAL_SERVER_ERROR' }}</small>
+        </div>
+    </div>
+</div>
+
+<style>
+.error-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+    color: white;
+}
+
+.error-animation {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.error-number {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+    text-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.error-icon {
+    font-size: 3rem;
+    color: #ffd93d;
+    margin-bottom: 1rem;
+    animation: bounce 2s infinite;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.error-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.error-details {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+    text-align: left;
+}
+
+.error-details p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.error-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.error-details li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.error-details li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.error-code {
+    opacity: 0.7;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .error-number {
+        font-size: 4rem;
+    }
+    
+    .error-title {
+        font-size: 2rem;
+    }
+    
+    .error-description {
+        font-size: 1rem;
+    }
+    
+    .error-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .error-details {
+        text-align: center;
+    }
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto-retry functionality
+    let retryCount = 0;
+    const maxRetries = 3;
+    
+    function autoRetry() {
+        if (retryCount < maxRetries) {
+            retryCount++;
+            console.log(`Auto-retry attempt ${retryCount}/${maxRetries}`);
+            
+            setTimeout(() => {
+                location.reload();
+            }, 5000); // Retry after 5 seconds
+        }
+    }
+    
+    // Uncomment the line below to enable auto-retry
+    // autoRetry();
+});
+</script>
+{% endblock %}

@@ -1,186 +1,427 @@
 {
   "personal_info": {
-    "name": "Your Name",
+    "name": "Alex Thompson",
     "title": "Software Engineer & AI/ML Developer",
     "subtitle": "Data Science & Business Management Enthusiast",
-    "email": "your.email@example.com",
+    "email": "alex.thompson@example.com",
     "phone": "+1 (555) 123-4567",
-    "location": "Your City, Country",
-    "linkedin": "https://linkedin.com/in/yourprofile",
-    "github": "https://github.com/yourusername",
-    "website": "https://yourwebsite.com",
-    "bio": "Passionate software engineer specializing in AI/ML development, data science, and business management. I love creating innovative solutions that bridge technology and business needs.",
-    "profile_image": "images/profile.jpg"
+    "location": "San Francisco, CA",
+    "linkedin": "https://linkedin.com/in/alexthompson",
+    "github": "https://github.com/alexthompson",
+    "website": "https://alexthompson.dev",
+    "bio": "Passionate software engineer with 5+ years of experience specializing in AI/ML development, data science, and business management. I love creating innovative solutions that bridge technology and business needs, with a focus on scalable systems and user-centered design.",
+    "profile_image": "images/profile.jpg",
+    "stats": {
+      "years_experience": 5,
+      "projects_completed": 50,
+      "happy_clients": 25,
+      "lines_of_code": 100000
+    }
   },
   "skills": [
     {
       "category": "Programming Languages",
       "items": [
-        {"name": "Python", "level": 90, "color": "#3776ab"},
-        {"name": "JavaScript", "level": 85, "color": "#f7df1e"},
-        {"name": "Java", "level": 80, "color": "#ed8b00"},
-        {"name": "C++", "level": 75, "color": "#00599c"},
-        {"name": "SQL", "level": 85, "color": "#4479a1"}
+        {"name": "Python", "level": 95, "color": "#3776ab", "years": 5},
+        {"name": "JavaScript", "level": 90, "color": "#f7df1e", "years": 4},
+        {"name": "TypeScript", "level": 85, "color": "#3178c6", "years": 3},
+        {"name": "Java", "level": 80, "color": "#ed8b00", "years": 3},
+        {"name": "C++", "level": 75, "color": "#00599c", "years": 2},
+        {"name": "SQL", "level": 90, "color": "#4479a1", "years": 4},
+        {"name": "R", "level": 70, "color": "#276dc3", "years": 2}
       ]
     },
     {
       "category": "AI/ML & Data Science",
       "items": [
-        {"name": "TensorFlow", "level": 85, "color": "#ff6f00"},
-        {"name": "PyTorch", "level": 80, "color": "#ee4c2c"},
-        {"name": "Scikit-learn", "level": 90, "color": "#f7931e"},
-        {"name": "Pandas", "level": 95, "color": "#150458"},
-        {"name": "NumPy", "level": 90, "color": "#013243"}
+        {"name": "TensorFlow", "level": 90, "color": "#ff6f00", "years": 4},
+        {"name": "PyTorch", "level": 85, "color": "#ee4c2c", "years": 3},
+        {"name": "Scikit-learn", "level": 95, "color": "#f7931e", "years": 5},
+        {"name": "Pandas", "level": 98, "color": "#150458", "years": 5},
+        {"name": "NumPy", "level": 95, "color": "#013243", "years": 5},
+        {"name": "Keras", "level": 88, "color": "#d00000", "years": 3},
+        {"name": "OpenCV", "level": 80, "color": "#5c3ee8", "years": 2},
+        {"name": "Matplotlib", "level": 90, "color": "#11557c", "years": 4}
       ]
     },
     {
       "category": "Web Development",
       "items": [
-        {"name": "React", "level": 85, "color": "#61dafb"},
-        {"name": "Flask", "level": 90, "color": "#000000"},
-        {"name": "Django", "level": 80, "color": "#092e20"},
-        {"name": "Node.js", "level": 75, "color": "#339933"},
-        {"name": "HTML/CSS", "level": 95, "color": "#e34f26"}
+        {"name": "React", "level": 90, "color": "#61dafb", "years": 4},
+        {"name": "Vue.js", "level": 80, "color": "#4fc08d", "years": 2},
+        {"name": "Flask", "level": 95, "color": "#000000", "years": 5},
+        {"name": "Django", "level": 85, "color": "#092e20", "years": 3},
+        {"name": "Node.js", "level": 85, "color": "#339933", "years": 3},
+        {"name": "Express.js", "level": 82, "color": "#000000", "years": 3},
+        {"name": "HTML/CSS", "level": 95, "color": "#e34f26", "years": 5},
+        {"name": "SASS", "level": 85, "color": "#cc6699", "years": 3}
       ]
     },
     {
-      "category": "Tools & Technologies",
+      "category": "Cloud & DevOps",
       "items": [
-        {"name": "Git", "level": 90, "color": "#f05032"},
-        {"name": "Docker", "level": 80, "color": "#2496ed"},
-        {"name": "AWS", "level": 75, "color": "#ff9900"},
-        {"name": "MongoDB", "level": 80, "color": "#47a248"},
-        {"name": "PostgreSQL", "level": 85, "color": "#336791"}
+        {"name": "AWS", "level": 85, "color": "#ff9900", "years": 3},
+        {"name": "Google Cloud", "level": 75, "color": "#4285f4", "years": 2},
+        {"name": "Azure", "level": 70, "color": "#0078d4", "years": 1},
+        {"name": "Docker", "level": 88, "color": "#2496ed", "years": 3},
+        {"name": "Kubernetes", "level": 75, "color": "#326ce5", "years": 2},
+        {"name": "Jenkins", "level": 80, "color": "#d33833", "years": 2},
+        {"name": "Terraform", "level": 75, "color": "#623ce4", "years": 2}
+      ]
+    },
+    {
+      "category": "Databases & Tools",
+      "items": [
+        {"name": "PostgreSQL", "level": 90, "color": "#336791", "years": 4},
+        {"name": "MongoDB", "level": 85, "color": "#47a248", "years": 3},
+        {"name": "Redis", "level": 80, "color": "#dc382d", "years": 2},
+        {"name": "Git", "level": 95, "color": "#f05032", "years": 5},
+        {"name": "Jupyter", "level": 90, "color": "#f37626", "years": 4},
+        {"name": "VS Code", "level": 95, "color": "#007acc", "years": 5}
       ]
     }
   ],
   "projects": [
     {
       "id": 1,
-      "title": "AI-Powered Recommendation System",
+      "title": "AI-Powered E-commerce Recommendation Engine",
       "category": "AI/ML",
-      "description": "Built a sophisticated recommendation engine using collaborative filtering and deep learning techniques.",
-      "long_description": "Developed an advanced recommendation system that combines collaborative filtering, content-based filtering, and deep learning approaches to provide personalized recommendations. The system processes user behavior data and item features to generate accurate predictions.",
-      "technologies": ["Python", "TensorFlow", "Pandas", "Flask", "Redis"],
+      "description": "Advanced recommendation system using deep learning and collaborative filtering to increase sales by 35%.",
+      "long_description": "Developed a sophisticated recommendation engine that combines collaborative filtering, content-based filtering, and deep neural networks. The system processes over 1M user interactions daily and provides real-time personalized recommendations. Implemented A/B testing framework and achieved 35% increase in click-through rates.",
+      "technologies": ["Python", "TensorFlow", "Pandas", "Flask", "Redis", "PostgreSQL", "Docker", "AWS"],
       "image": "images/projects/recommendation-system.jpg",
-      "github": "https://github.com/yourusername/recommendation-system",
+      "github": "https://github.com/alexthompson/recommendation-engine",
       "demo": "https://recommendation-demo.com",
       "features": [
-        "Real-time recommendations",
-        "Collaborative filtering algorithm",
-        "Deep neural network implementation",
-        "A/B testing framework",
-        "Performance monitoring dashboard"
+        "Real-time recommendations with <100ms latency",
+        "Hybrid collaborative and content-based filtering",
+        "Deep neural network with attention mechanism",
+        "A/B testing framework with statistical significance",
+        "Performance monitoring and alerting",
+        "Scalable microservices architecture"
       ],
       "status": "completed",
-      "date": "2024-12-15"
+      "date": "2024-12-15",
+      "impact": "35% increase in CTR, 25% boost in revenue"
     },
     {
       "id": 2,
-      "title": "Business Analytics Dashboard",
+      "title": "Real-time Business Intelligence Dashboard",
       "category": "Data Science",
-      "description": "Created an interactive dashboard for business intelligence and data visualization.",
-      "long_description": "Developed a comprehensive business analytics dashboard that aggregates data from multiple sources and provides interactive visualizations for business decision-making. Includes real-time data processing and automated reporting features.",
-      "technologies": ["Python", "Plotly", "Dash", "PostgreSQL", "Docker"],
+      "description": "Interactive dashboard processing 10TB+ daily data with ML-powered insights and automated reporting.",
+      "long_description": "Built a comprehensive business intelligence platform that aggregates data from 15+ sources, processes over 10TB daily, and provides real-time visualizations. Includes predictive analytics, anomaly detection, and automated report generation for C-level executives.",
+      "technologies": ["Python", "Plotly", "Dash", "Apache Kafka", "PostgreSQL", "Docker", "Kubernetes", "GCP"],
       "image": "images/projects/analytics-dashboard.jpg",
-      "github": "https://github.com/yourusername/analytics-dashboard",
+      "github": "https://github.com/alexthompson/bi-dashboard",
       "demo": "https://analytics-demo.com",
       "features": [
-        "Real-time data visualization",
-        "Interactive charts and graphs",
-        "Automated report generation",
-        "Multi-source data integration",
-        "Role-based access control"
+        "Real-time data streaming with Apache Kafka",
+        "Interactive visualizations with drill-down capabilities",
+        "ML-powered trend analysis and forecasting",
+        "Automated anomaly detection and alerting",
+        "Multi-tenant architecture with role-based access",
+        "Export to PDF, Excel, and API integration"
       ],
       "status": "completed",
-      "date": "2024-11-20"
+      "date": "2024-11-20",
+      "impact": "Reduced reporting time by 80%, improved decision-making speed"
     },
     {
       "id": 3,
-      "title": "E-commerce Platform",
+      "title": "Scalable Microservices E-commerce Platform",
       "category": "Web Development",
-      "description": "Full-stack e-commerce application with modern UI and advanced features.",
-      "long_description": "Built a complete e-commerce platform from scratch with modern design principles, secure payment processing, inventory management, and admin dashboard. Implements best practices for scalability and security.",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
+      "description": "Full-stack platform handling 100K+ daily users with microservices architecture and CI/CD pipeline.",
+      "long_description": "Architected and developed a complete e-commerce platform using microservices architecture. Handles over 100K daily active users, processes $1M+ monthly transactions, and maintains 99.9% uptime. Implemented comprehensive testing, monitoring, and deployment automation.",
+      "technologies": ["React", "Node.js", "TypeScript", "MongoDB", "Redis", "Docker", "Kubernetes", "AWS", "Stripe"],
       "image": "images/projects/ecommerce-platform.jpg",
-      "github": "https://github.com/yourusername/ecommerce-platform",
+      "github": "https://github.com/alexthompson/ecommerce-platform",
       "demo": "https://ecommerce-demo.com",
       "features": [
-        "Responsive design",
-        "Secure payment processing",
-        "Inventory management",
-        "Admin dashboard",
-        "Search and filtering"
+        "Microservices architecture with API Gateway",
+        "Progressive Web App with offline capabilities",
+        "Advanced search with Elasticsearch",
+        "Payment processing with multiple providers",
+        "Inventory management with real-time updates",
+        "Admin dashboard with analytics and reporting"
       ],
       "status": "completed",
-      "date": "2024-10-10"
+      "date": "2024-10-10",
+      "impact": "Handles 100K+ daily users, $1M+ monthly GMV"
+    },
+    {
+      "id": 4,
+      "title": "Computer Vision Quality Control System",
+      "category": "AI/ML",
+      "description": "Automated defect detection system using deep learning, reducing manual inspection time by 90%.",
+      "long_description": "Developed an industrial computer vision system for automated quality control in manufacturing. Uses YOLO object detection and custom CNN models to identify defects with 99.2% accuracy. Deployed on edge devices for real-time processing.",
+      "technologies": ["Python", "PyTorch", "OpenCV", "FastAPI", "Docker", "NVIDIA Jetson", "MLflow"],
+      "image": "images/projects/computer-vision.jpg",
+      "github": "https://github.com/alexthompson/cv-quality-control",
+      "demo": "https://cv-demo.com",
+      "features": [
+        "Real-time defect detection with 99.2% accuracy",
+        "Custom CNN architecture optimized for edge devices",
+        "Data augmentation and active learning pipeline",
+        "Integration with manufacturing execution systems",
+        "Comprehensive logging and model versioning",
+        "Web-based annotation tool for continuous improvement"
+      ],
+      "status": "completed",
+      "date": "2024-09-05",
+      "impact": "90% reduction in manual inspection, 15% cost savings"
+    },
+    {
+      "id": 5,
+      "title": "Predictive Maintenance IoT Platform",
+      "category": "Data Science",
+      "description": "IoT-based predictive maintenance system using time-series analysis and machine learning.",
+      "long_description": "Built an end-to-end IoT platform for predictive maintenance in industrial equipment. Collects sensor data from 1000+ devices, applies time-series analysis and ML models to predict failures 30 days in advance with 85% accuracy.",
+      "technologies": ["Python", "InfluxDB", "Grafana", "Apache Kafka", "TensorFlow", "Docker", "AWS IoT"],
+      "image": "images/projects/iot-platform.jpg",
+      "github": "https://github.com/alexthompson/predictive-maintenance",
+      "demo": "https://iot-demo.com",
+      "features": [
+        "Real-time sensor data collection and processing",
+        "Time-series forecasting with LSTM networks",
+        "Anomaly detection with isolation forests",
+        "Interactive dashboards with Grafana",
+        "Mobile app for field technicians",
+        "Integration with maintenance management systems"
+      ],
+      "status": "completed",
+      "date": "2024-08-15",
+      "impact": "30% reduction in unplanned downtime, $500K annual savings"
+    },
+    {
+      "id": 6,
+      "title": "Natural Language Processing Chatbot",
+      "category": "AI/ML",
+      "description": "Intelligent customer service chatbot using transformer models and natural language understanding.",
+      "long_description": "Developed an advanced conversational AI system for customer support using transformer-based models. Handles 80% of customer queries automatically with 95% satisfaction rate. Includes intent recognition, entity extraction, and knowledge base integration.",
+      "technologies": ["Python", "Transformers", "Hugging Face", "Rasa", "FastAPI", "PostgreSQL", "Docker"],
+      "image": "images/projects/nlp-chatbot.jpg",
+      "github": "https://github.com/alexthompson/nlp-chatbot",
+      "demo": "https://chatbot-demo.com",
+      "features": [
+        "Multi-turn conversation handling",
+        "Intent recognition with 97% accuracy",
+        "Named entity recognition and extraction",
+        "Knowledge base integration and RAG",
+        "Sentiment analysis and escalation rules",
+        "Multi-language support and translation"
+      ],
+      "status": "in-progress",
+      "date": "2024-12-20",
+      "impact": "80% query automation, 95% satisfaction rate"
     }
   ],
   "experience": [
     {
       "title": "Senior Software Engineer",
-      "company": "Tech Company Inc.",
-      "location": "Remote",
+      "company": "TechFlow Solutions",
+      "location": "San Francisco, CA",
       "duration": "2023 - Present",
-      "description": "Leading AI/ML initiatives and developing scalable software solutions.",
+      "description": "Leading AI/ML initiatives and architecting scalable systems for enterprise clients.",
       "achievements": [
-        "Led development of ML pipeline that improved model accuracy by 25%",
-        "Mentored junior developers and established coding best practices",
-        "Implemented CI/CD pipeline reducing deployment time by 60%"
+        "Led development of ML pipeline serving 10M+ daily predictions",
+        "Architected microservices platform handling $50M+ annual revenue",
+        "Mentored team of 8 junior developers and established best practices",
+        "Implemented CI/CD pipeline reducing deployment time by 75%",
+        "Drove adoption of MLOps practices improving model deployment speed by 60%"
       ],
+      "technologies": ["Python", "TensorFlow", "Kubernetes", "AWS", "PostgreSQL"],
       "type": "work"
     },
     {
-      "title": "Data Science Intern",
-      "company": "Analytics Startup",
-      "location": "New York, NY",
+      "title": "Machine Learning Engineer",
+      "company": "DataCorp Analytics",
+      "location": "Seattle, WA",
       "duration": "2022 - 2023",
-      "description": "Worked on data analysis projects and machine learning model development.",
+      "description": "Developed production ML models and data pipelines for Fortune 500 clients.",
       "achievements": [
-        "Built predictive models for customer churn analysis",
-        "Automated data preprocessing pipelines",
-        "Presented findings to stakeholders and clients"
+        "Built recommendation system increasing client revenue by 25%",
+        "Deployed computer vision models with 99%+ accuracy for quality control",
+        "Automated data preprocessing pipelines processing 1TB+ daily",
+        "Collaborated with data scientists to productionize 15+ ML models",
+        "Reduced model training time by 40% through optimization techniques"
       ],
+      "technologies": ["Python", "PyTorch", "Apache Kafka", "Docker", "GCP"],
+      "type": "work"
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "InnovateTech Startup",
+      "location": "Austin, TX",
+      "duration": "2021 - 2022",
+      "description": "Built end-to-end web applications and established engineering processes in fast-paced startup.",
+      "achievements": [
+        "Developed MVP that secured $2M Series A funding",
+        "Built responsive web applications serving 50K+ users",
+        "Established testing frameworks achieving 90%+ code coverage",
+        "Implemented real-time features using WebSocket technology",
+        "Optimized application performance resulting in 50% load time improvement"
+      ],
+      "technologies": ["React", "Node.js", "MongoDB", "AWS", "Docker"],
+      "type": "work"
+    },
+    {
+      "title": "Software Engineering Intern",
+      "company": "Global Tech Corp",
+      "location": "New York, NY",
+      "duration": "2020 - 2021",
+      "description": "Contributed to large-scale distributed systems and gained experience in enterprise development.",
+      "achievements": [
+        "Contributed to core platform serving 1M+ daily active users",
+        "Implemented automated testing reducing QA cycle time by 30%",
+        "Participated in code reviews and gained mentorship from senior engineers",
+        "Built internal tools improving team productivity by 20%"
+      ],
+      "technologies": ["Java", "Spring Boot", "PostgreSQL", "Jenkins"],
       "type": "work"
     }
   ],
   "volunteering": [
     {
-      "title": "Technology Committee Chair",
-      "organization": "University Computer Science Society",
-      "duration": "2023 - Present",
-      "description": "Leading technology initiatives and organizing coding workshops for students.",
+      "title": "Technical Advisor",
+      "organization": "AI for Good Foundation",
+      "duration": "2024 - Present",
+      "description": "Providing technical guidance for AI projects addressing social and environmental challenges.",
       "achievements": [
-        "Organized 15+ technical workshops",
-        "Increased society membership by 40%",
-        "Established partnerships with tech companies"
+        "Advised on 5 projects with combined $1M+ funding",
+        "Developed open-source ML framework adopted by 10+ organizations",
+        "Mentored 15+ data scientists on responsible AI practices",
+        "Organized workshops on AI ethics and bias mitigation"
       ]
     },
     {
-      "title": "Coding Mentor",
-      "organization": "Code for Good",
-      "duration": "2022 - Present",
-      "description": "Mentoring underprivileged students in programming and computer science.",
+      "title": "Technology Committee Chair",
+      "organization": "Bay Area Computer Science Society",
+      "duration": "2023 - Present",
+      "description": "Leading technology initiatives and organizing educational events for 500+ members.",
       "achievements": [
-        "Mentored 20+ students",
-        "Developed beginner-friendly curriculum",
-        "Achieved 90% course completion rate"
+        "Organized 25+ technical workshops with 90% satisfaction rate",
+        "Increased society membership by 60% through innovative programs",
+        "Established partnerships with 10+ tech companies for sponsorships",
+        "Launched mentorship program connecting 50+ mentor-mentee pairs"
+      ]
+    },
+    {
+      "title": "Coding Bootcamp Instructor",
+      "organization": "Code for Change",
+      "duration": "2022 - Present",
+      "description": "Teaching programming fundamentals to underrepresented communities in tech.",
+      "achievements": [
+        "Taught 100+ students with 85% course completion rate",
+        "Developed curriculum covering full-stack web development",
+        "Achieved 70% job placement rate within 6 months of graduation",
+        "Secured $50K in scholarships for students from low-income backgrounds"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "title": "Technical Reviewer",
+      "organization": "O'Reilly Media",
+      "duration": "2023 - Present",
+      "description": "Technical review of machine learning and data science publications.",
+      "achievements": [
+        "Reviewed 8 technical books on ML/AI topics",
+        "Provided feedback improving content quality and accuracy",
+        "Contributed to educational content reaching 100K+ developers"
+      ]
+    },
+    {
+      "title": "Conference Speaker",
+      "organization": "Various Tech Conferences",
+      "duration": "2022 - Present",
+      "description": "Speaking at conferences about AI/ML best practices and industry trends.",
+      "achievements": [
+        "Delivered 12 talks at major conferences (PyConf, MLConf, DevSummit)",
+        "Reached audience of 5000+ developers and data scientists",
+        "Topics covered: MLOps, Computer Vision, Ethical AI"
       ]
     }
   ],
   "education": [
     {
+      "degree": "Master of Science in Computer Science",
+      "institution": "Stanford University",
+      "duration": "2019 - 2021",
+      "gpa": "3.9/4.0",
+      "thesis": "Deep Learning Approaches for Real-time Object Detection in Autonomous Systems",
+      "relevant_courses": [
+        "Machine Learning (CS229)",
+        "Deep Learning (CS230)",
+        "Computer Vision (CS231N)",
+        "Natural Language Processing (CS224N)",
+        "Distributed Systems (CS244)"
+      ],
+      "achievements": [
+        "Teaching Assistant for CS229 (Machine Learning)",
+        "Published 2 papers in top-tier conferences",
+        "Recipient of Stanford AI Fellowship"
+      ]
+    },
+    {
       "degree": "Bachelor of Science in Computer Science",
-      "institution": "University Name",
-      "duration": "2020 - 2024",
+      "institution": "UC Berkeley",
+      "duration": "2015 - 2019",
       "gpa": "3.8/4.0",
       "relevant_courses": [
-        "Machine Learning",
-        "Data Structures & Algorithms",
-        "Database Systems",
-        "Software Engineering",
-        "Business Management"
+        "Data Structures and Algorithms (CS61B)",
+        "Computer Systems (CS61C)",
+        "Database Systems (CS186)",
+        "Software Engineering (CS169)",
+        "Statistics (STAT134)"
+      ],
+      "achievements": [
+        "Summa Cum Laude graduation",
+        "President of Computer Science Honor Society",
+        "Dean's List for 6 consecutive semesters"
       ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect",
+      "issuer": "Amazon Web Services",
+      "date": "2024-06-15",
+      "credential_id": "AWS-SA-123456",
+      "url": "https://aws.amazon.com/verification"
+    },
+    {
+      "name": "Google Cloud Professional ML Engineer",
+      "issuer": "Google Cloud",
+      "date": "2024-03-20",
+      "credential_id": "GCP-ML-789012",
+      "url": "https://cloud.google.com/certification"
+    },
+    {
+      "name": "TensorFlow Developer Certificate",
+      "issuer": "TensorFlow",
+      "date": "2023-12-10",
+      "credential_id": "TF-DEV-345678",
+      "url": "https://tensorflow.org/certificate"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Innovation Excellence Award",
+      "organization": "TechFlow Solutions",
+      "date": "2024-11-15",
+      "description": "Recognized for developing AI solution that increased company revenue by $5M"
+    },
+    {
+      "title": "Best Paper Award",
+      "organization": "International Conference on Machine Learning (ICML)",
+      "date": "2024-07-20",
+      "description": "For research on 'Efficient Neural Architecture Search for Edge Devices'"
+    },
+    {
+      "title": "Outstanding Graduate Student",
+      "organization": "Stanford University",
+      "date": "2021-06-15",
+      "description": "Awarded to top 1% of graduating computer science students"
     }
   ]
 }
